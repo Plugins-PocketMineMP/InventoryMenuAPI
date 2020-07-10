@@ -42,3 +42,10 @@ $inv->setCloseHandler(function(\pocketmine\Player $player) : void{
     echo "{$player->getName()} has just closed inventory!";
 });
 ```
+
+* Send inventory
+```php
+/** @var \alvin0319\InventoryMenuAPI\inventory\InventoryBase $inv */
+/** @var \pocketmine\Player $player */
+$inv->send($player);
+```
