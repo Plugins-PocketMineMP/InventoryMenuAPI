@@ -71,8 +71,9 @@ class ChestInventory extends InventoryBase{
 		$pk->x = $x;
 		$pk->y = $y;
 		$pk->z = $z;
-		$pk->windowId = $who->getWindowId($this);
 		$who->sendDataPacket($pk);
+		$pk->windowId = WindowTypes::MINECART_CHEST;
+		$pk->type = WindowTypes::CONTAINER;
 
 		$this->sendContents($who);
 	}
